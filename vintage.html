@@ -9,7 +9,7 @@
       href="https://img.icons8.com/fluent/512/disney-1.png"
     />
     <!-- ^this is the web icon you see in the tab. -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
     <title>Disney Characters</title>
   </head>
   <body>
@@ -28,5 +28,35 @@
         </div>
       </header>
     </div>
+
+    <div class="content-area">
+      <div class="wrapper">
+        <h1>Disney Characters</h1>
+        <p>Here is a compilation of Disney Characters!</p>
+        <div id="disneyCharacters"></div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="index.js"></script>
+    <script>
+      if (window.location.pathname.includes("vintage.html")) {
+        const container = document.getElementById("disneyCharacters");
+        axios
+          .get("https://api.disneyapi.dev/character?page=1")
+          .then((res) => {
+            const characters = res.data.data;
+            characters.forEach((char) => {
+              const charDiv = document.createElement("div");
+              charDiv.textContent = char.name;
+              container.appendChild(charDiv);
+            });
+          })
+          .catch((err) => {
+            console.error("Error fetching characters:", err);
+            container.innerHTML = "<p>Error!</p>";
+          });
+      }
+    </script>
   </body>
 </html>

@@ -32,22 +32,4 @@ const getAllCharacters= async() => {
 
 
 
-// const response = await fetch("",{
-//     method:"POST",
-//     body: JSON.stringify()
-// });                                    
 
-
-
-
-
-// const API_KEY="https://api.disneyapi.dev/character";
-
-// function disneyCharac(){
-// }
-
-// async function disney() {
-   
-//         const disneyResult = await disneyCharac();
-//         console.log(disneyResult);
-// }
