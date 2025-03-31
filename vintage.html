@@ -61,30 +61,33 @@
     <script>
       if (window.location.pathname.includes("vintage.html")) {
         const container = document.getElementById("disneyCharacters");
-        axios.get("https://api.disneyapi.dev/character?page=1")
-    .then(res => {
-      const characters = res.data.data;
-      characters.forEach(char => {
-        const charCard = document.createElement("div");
-        charCard.classList.add("characterCard");
-        const name = document.createElement("h3");
-        name.textContent = char.name;
-        document.createElement("img");
-        image.src = char.imageUrl || "https://via.placeholder.com/150x150?text=No+Image";
-        image.alt = `${char.name}image`;
-        image.classList.add("characterImage");
-        charCard.appendChild(image);
-        charCard.appendChild(name);
+        axios
+          .get("https://api.disneyapi.dev/character?page=1")
+          .then((res) => {
+            const characters = res.data.data;
+            characters.forEach((char) => {
+              const charCard = document.createElement("div");
+              charCard.classList.add("characterCard");
+              const name = document.createElement("h3");
+              name.textContent = char.name;
 
-        container.appendChild(charCard);
-      });
-      
-      })
-      .catch(err => {
-        console.error("Error!:",err);
-        container.innerHTML= "<p> Couldn't load characters!</p>";
-      });
-    }
+              document.createElement("img");
+              image.src =
+                char.imageUrl ||
+                "https://via.placeholder.com/150x150?text=No+Image";
+              image.alt = `${char.name}image`;
+              image.classList.add("characterImage");
+              charCard.appendChild(image);
+              charCard.appendChild(name);
+
+              container.appendChild(charCard);
+            });
+          })
+          .catch((err) => {
+            console.error("Error!:", err);
+            container.innerHTML = "<p> Uh-oh, couldn't load characters!</p>";
+          });
+      }
     </script>
   </body>
 </html>
