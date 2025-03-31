@@ -1,0 +1,120 @@
+/* referencces:https://coolors.co/a682ff-715aff-5887ff-55c1ff-102e4a */
+
+*{
+    margin:0;
+    padding:0;
+}
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    background-color: #A682FF;
+}
+
+.wrapper{
+width: 90%;
+margin: 0 auto;
+}
+
+header{
+    width: 100%;
+    height: 100px;
+    background: #715AFF;
+    position:fixed;
+}
+
+.logo{
+    width: 30%;
+    float: left;
+    text-align: left;
+    line-height: 100px;
+}
+
+.logo a{
+    text-decoration: none;
+    font-size: 30px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color:#5887FF;
+    letter-spacing: 4px;
+}
+
+nav{
+    float:right;
+    line-height: 100px;
+}
+
+nav a{
+    text-decoration: none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    letter-spacing: 4px;
+    font-size: 20px;
+    color: #55C1FF;
+    padding: 36px 10px;
+    margin: 0 1px;
+}
+
+nav a:hover{
+   color:white;
+   font-weight: 700;
+}
+
+.banner-area{
+    background-image: url(https://wallpapers.com/images/featured/disney-has6vy47k75d0bzs.jpg);
+    background-size: cover;
+    background-position: center center;
+    top:100px;
+    height: 56vw;
+    width:100%;
+    position: fixed;
+    text-decoration-color: #715AFF;
+    
+
+}
+
+/* .banner-area::after {
+    content: ``;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #55C1FF; 
+    opacity: .7;
+    z-index: -1;
+
+}
+
+.banner-area h2{ */
+    /* padding: top 8%;
+    font-size: 80px;
+    color:#A682FF;
+} */
+
+.content-area{
+    width: 100%;
+    height: 800px;
+    position: relative;
+    background: white;
+    top: 600px;
+}
+
+.content-area h2{
+    font-size: 40px;
+    margin:0;
+    padding-top: 30px;
+    letter-spacing: 4px;
+}
+
+.content-area p{
+    padding: 2% 0;
+    line-height: 35 px;
+    text-align:justify;
+}
+
+.disclaimer p{
+    color:#55C1FF;
+    font-size: 20px;
+    line-height:normal;
+    text-align: justify;
+}
